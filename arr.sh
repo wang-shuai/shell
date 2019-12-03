@@ -11,3 +11,6 @@ echo ${names[@]}
 
 echo ${#names[@]}
 
+for n in ${names[*]};do 
+    echo ${n}
+done

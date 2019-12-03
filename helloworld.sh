@@ -10,7 +10,7 @@ echo ${name}
 readonly name
 #name="can not change" 
 
-unset name
+# unset name
 
 name1="set"
 unset name1

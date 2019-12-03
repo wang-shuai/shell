@@ -10,5 +10,13 @@ echo $name_a
 
 echo ${#name_a}
 
-echo ${name_a:2:4}
+echo ${name_a:1:2}
 
+
+greeting="hello "$name""
+greeting_1="hello $name"
+echo $greeting $greeting_1
+
+greeting_2='hello '$name' '
+greeting_3='hello $name'
+echo $greeting_2 $greeting_3

@@ -3,7 +3,8 @@
 a=10
 b=20
 
-if [ $a -eq $b ]
+if [ $a == $b ]
+# if [ $a -eq $b ]  
 then 
 	echo "$a -eq $b : a==b"
 else
@@ -17,7 +18,8 @@ else
 	echo "$a == $b"
 fi
 
-if [[ $a -lt 100 && $b -gt 100 ]]
+#  逻辑运算 if [[ $a -lt 100 && $b -gt 100 ]] 
+if [ $a -lt 100 -a $b -gt 100 ]  # 布尔运算  !:非  -a:and  -o:or  
 then
 	echo "$a < 100 and $b > 100"
 else 
@@ -29,7 +31,7 @@ t='456'
 
 if [ -n $s ]
 then
-	echo "$s lenth != 0"
+	echo "$s length != 0"
 else 
 	echo "$s length == 0"
 fi
@@ -48,3 +50,13 @@ else
 	echo "$t length!=0"
 fi
 
+
+c="adb"
+d="234"
+# if [ $c == $d ]   
+if [ $c = $d ]   #都可以，数字的话 只能 == 
+then
+	echo "$c === $d"
+else
+	echo "$c != $d"
+fi

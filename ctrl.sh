@@ -1,6 +1,6 @@
 #!/bin/sh
 
-i=20
+i=40
 
 case $i in
 20)
@@ -8,6 +8,9 @@ case $i in
 ;;
 30)
 	echo "it is 30"
+;;
+40|50)
+	echo 'it is 40 or 50'
 ;;
 *)
 	echo "default"
@@ -20,7 +23,8 @@ do
 	echo $i
 done
 
-for f in $(ls *.sh)
+# for f in `ls *.sh`
+for f in $(ls *.sh)  #效果同上
 do 
 	echo $f is file path\!;
 done
@@ -36,5 +40,6 @@ con=0
 until [ $con -gt 10 ]
 do 
 	echo $con
-	con=$(expr $con + 1)
+	# con=$(expr $con + 1)
+	con=`expr $con + 1`  #效果同上
 done 
